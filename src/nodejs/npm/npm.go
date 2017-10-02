@@ -56,6 +56,7 @@ func (n *NPM) Rebuild() error {
 
 func (n *NPM) doBuild() (bool, string, error) {
 	pkgExists, err := libbuildpack.FileExists(filepath.Join(n.BuildDir, "package.json"))
+	n.Log.Info("file directory (%s)", pkgExists)	
 	if err != nil {
 		return false, "", err
 	}
