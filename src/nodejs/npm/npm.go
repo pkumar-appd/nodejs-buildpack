@@ -30,7 +30,7 @@ func (n *NPM) Build() error {
 	n.Log.Info("Installing node modules (%s)", source)
 	npmArgs := []string{"install", "--unsafe-perm", "--userconfig", filepath.Join(n.BuildDir, ".npmrc"), "--cache", filepath.Join(n.BuildDir, ".npm")}
 	n.Log.Info("Dependencies Installed (%s)", npmArgs)
-	err := n.Rebuild()
+	n.Rebuild()
 	
 	return n.Command.Execute(n.BuildDir, n.Log.Output(), n.Log.Output(), "npm", npmArgs...)
 }
