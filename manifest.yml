@@ -39,6 +39,12 @@ dependency_deprecation_dates:
   link: https://github.com/nodejs/LTS
 dependencies:
 - name: node
+  version: 5.1.1
+  uri: https://pivotal-buildpacks.s3.amazonaws.com/concourse-binaries/node/node-5.1.1-linux-x64.tgz
+  md5: 32c173cffe8f561d8d7498a84e71bada
+  cf_stacks:
+  - cflinuxfs2
+- name: node
   version: 0.12.16
   uri: https://buildpacks.cloudfoundry.org/dependencies/node/node-0.12.16-linux-x64.tgz
   md5: 1dd6db6db0581ba19cb0b453a2e93b7e
